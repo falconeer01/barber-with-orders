@@ -1,0 +1,54 @@
+
+<!-- Create Modal example -->
+<div class="modal fade create-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <div class="card shadow-none border-0 p-3 pb-0">
+              <div class="card-title">
+                  <h4>Create Service</h4>
+              </div>
+              <div class="card-body" *ngIf="appointmentForm">
+                  <form  [formGroup]="appointmentForm" (ngSubmit)="onSubmit()">
+                      <div class="mb-3">
+                          <label class="form-label" for="user-id-input">User ID</label>
+                          <input type="text"
+                               class="form-control"        formControlName="userId"        id="user-id-input">
+                      </div>
+                      <div class="mb-3">
+                          <label class="form-label" for="full-name">Full Name</label>
+                          <input type="text"        class="form-control"        formControlName="fullName"      id="full-name-input">
+                      </div>
+                      <div class="mb-3">
+                          <label class="form-label" for="phone-number-input">Phone Number</label>
+                          <input type="text"
+                                 class="form-control"        formControlName="phoneNumber"   id="phone-number-input">
+                      </div>
+                      <div class="mb-3">
+                          <label class="form-label" for="email-input">Email</label>
+                          <input type="text"
+                                 class="form-control"        formControlName="email"       id="email-input">
+                      </div>
+                      <div class="mb-3">
+                        <label class="form-label" for="start-date-input">Start Date</label>
+                        <input type="datetime-local"
+                               class="form-control"        formControlName="startDate"       id="start-date-input">
+                      </div>
+                      <div class="mb-3">
+                        <label class="form-label" for="end-date-input">End Date</label>
+                        <input type="datetime-local"
+                               class="form-control"        formControlName="endDate"       id="end-date-input">
+                      </div>
+                      <!-- <div class="mb-3">
+                        <label class="form-label" for="is-completed-input">Is Completed</label>
+                        <input type="text"
+                               class="form-control"        formControlName="isCompleted"       id="is-completed-input">
+                      </div> -->
+                      <div class="">
+                          <button class="btn btn-warning d-block ms-auto">Create Appointment</button>
+                      </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
